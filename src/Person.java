@@ -3,24 +3,39 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age;
-    // Getter method
 
+    // Main method
     public static void main(String[] args) {
+        //  local method Calling
+        detaPerson();
+    }
+
+    // Local method
+    private static void detaPerson() {
+        // Create a new Person object
         Person person = new Person();
-        person.setFirstName(""); // firstName is set to empty string
-        person.setLastName(""); // lastName is set to empty string
+
+        // Set first name and last name as empty strings, age as 10
+        person.setFirstName("");
+        person.setLastName("");
         person.setAge(10);
+
+        // Display full name and teen status
         System.out.println("fullName= " + person.getFullName());
         System.out.println("teen= " + person.isTeen());
-        person.setFirstName("John"); // firstName is set to John
+
+        // Set first name as "John" and age as 18
+        person.setFirstName("John");
         person.setAge(18);
         System.out.println("fullName= " + person.getFullName());
         System.out.println("teen= " + person.isTeen());
-        person.setLastName("Smith"); // lastName is set to Smith
-        System.out.println("fullName= " + person.getFullName());
 
+        // Set last name as "Smith"
+        person.setLastName("Smith");
+        System.out.println("fullName= " + person.getFullName());
     }
 
+    // Getter methods
     public String getFirstName() {
         return firstName;
     }
@@ -68,8 +83,6 @@ public class Person {
         }
     }
 }
-
-
 
 
 

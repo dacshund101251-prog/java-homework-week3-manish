@@ -1,7 +1,14 @@
 import java.util.Scanner;
-
+//main method
 public class WeekDays {
     public static void main(String[] args) {
+
+        weekdayscoutning();// main method calling
+
+    }
+    //local method
+    public static void weekdayscoutning(){
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a number (1-7): ");
@@ -9,7 +16,7 @@ public class WeekDays {
 
         switch(day) {
             case 1:
-                System.out.println("Monday");
+                System.out.println("MONDAY");
                 break;
             case 2:
                 System.out.println("TUESDAY");
@@ -24,7 +31,7 @@ public class WeekDays {
                 System.out.println("FRIDAY");
                 break;
             case 6:
-                System.out.println("Saturday");
+                System.out.println("SATURDAY");
                 break;
             case 7:
                 System.out.println("SUNDAY");

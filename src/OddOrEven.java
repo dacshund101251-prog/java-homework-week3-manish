@@ -1,24 +1,32 @@
 import java.util.Scanner;
 
-public class OddOrEven{
+public class OddOrEven {
     public static void main(String[] args) {
-        // Create Scanner object for input
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        // Ask the user for a number
-        System.out.print("Enter number: ");
-        int number = sc.nextInt();
+        // Input number from user
+        System.out.print("Enter any number: ");
+        int number = input.nextInt();
 
-        // Check if the number is even or odd
-        if (number % 2 == 0) {
-            System.out.println(number + " is even.");
+        // Call the local method
+        String result = OddOrEven(number);
+
+        // Display result
+        System.out.println("The entered number is " + result + ".");
+
+        input.close();
+    }
+
+    // Local method containing all logic
+    public static String OddOrEven(int num) {
+        if (num % 2 == 0) {
+            return "EVEN";
         } else {
-            System.out.println(number + " is odd.");
+            return "ODD";
         }
-
-        sc.close();
     }
 }
+
 
 
 

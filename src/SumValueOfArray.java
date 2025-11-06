@@ -1,11 +1,16 @@
 public class SumValueOfArray{
     public static void main(String[] args) {
+CalculateArraySum();
+
+    }
+
+    public static void CalculateArraySum(){
         // Example array
         int[] numbers = {10, 20, 30, 40, 50};
 
         int sum = 0;
 
-        // Loop through each element and add to sum
+        // Loop element and add to sum
         for (int a = 0; a < numbers.length; a++) {
             sum += numbers[a];
         }

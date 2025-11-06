@@ -1,22 +1,26 @@
 import java.util.Scanner;
 
-    public class OddOrEvenSimple {
-        public static void main(String[] args) {
-            // Create Scanner object for user input
-            Scanner input = new Scanner(System.in);
+public class OddOrEvenSimple {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-            // Ask the user for a number
-            System.out.print("Enter a number: ");
-            int number = input.nextInt();
+        // Input number from user
+        System.out.print("Enter any number: ");
+        int number = input.nextInt();
 
-            // Use ternary operator to determine if number is odd or even
-            String result = (number % 2 == 0) ? "even" : "odd";
+        // Call the local method
+        String result = checkOddEven(number);
 
-            // Display the result
-            System.out.println(number + " is " + result + ".");
+        // Display the result
+        System.out.println("The entered number is " + result + ".");
 
-            // Close the scanner
-            input.close();
-        }
+        input.close();
     }
+
+    // Local method containing all logic using ternary operator
+    public static String checkOddEven(int num) {
+        return (num % 2 == 0) ? "EVEN" : "ODD";
+    }
+}
+
 

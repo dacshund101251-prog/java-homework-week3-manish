@@ -1,19 +1,29 @@
-public class DivisibleBy3and5 {
+public class DivisibleBy3and5{
+
+    // Main method: program entry point
     public static void main(String[] args) {
+            // local method calling contain all logic of finding numbers divisible by 3 and 5
+        printDivisibleNumbers();
+    }
 
-        System.out.println("Numbers divisible by 3:");
-        for (int a = 1; a <= 100; a++) {
-            if (a % 3 == 0) {
-                System.out.print(a + " ");
+    // Local method calling
+    private static void printDivisibleNumbers() {
+        System.out.println("Numbers between 1 and 100 divisible by 3:");
+        // Loop through numbers from 1 to 100
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                System.out.print(i + " ");
             }
         }
 
-        System.out.println("\n\nNumbers divisible by 5:");
-        for (int a = 1; a <= 100; a++) {
-            if (a % 5 == 0) {
-                System.out.print(a + " ");
+        System.out.println("\n\nNumbers between 1 and 100 divisible by 5:");
+        // Loop through numbers from 1 to 100
+        for (int i = 1; i <= 100; i++) {
+            if (i % 5 == 0) {
+                System.out.print(i + " ");
             }
         }
+
+        System.out.println(); // Move to the next line after printing all numbers
     }
 }
-

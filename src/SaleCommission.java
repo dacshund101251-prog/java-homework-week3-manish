@@ -2,13 +2,21 @@ import java.util.Scanner;
 
 public class SaleCommission {
 
+    // Main method: program entry point
     public static void main(String[] args) {
+        // local method calling that contain all sales commission logic
+        calculateCommission();
+    }
+
+    // Local method: handles input, commission calculation, and output
+    private static void calculateCommission() {
         Scanner input = new Scanner(System.in);
 
-        // Input details
+        // Input sales details
         System.out.print("Enter Sales ID: ");
         int salesId = input.nextInt();
 
+        input.nextLine(); // Consume leftover newline
 
         System.out.print("Enter Seller's Name: ");
         String sellerName = input.nextLine();
@@ -19,6 +27,7 @@ public class SaleCommission {
         System.out.print("Enter Basic Salary: ");
         double basicSalary = input.nextDouble();
 
+        // Initialize commission
         double commission = 0;
 
         // Calculate commission based on sales amount
@@ -34,15 +43,17 @@ public class SaleCommission {
             commission = salesAmount * 0.02;
         }
 
-        // Display results
-        System.out.println("----- Sales Commission Report ---");
+        // Display the Sales Commission
+        System.out.println("\n----- Sales Commission Report -----");
         System.out.println("Sales ID: " + salesId);
         System.out.println("Seller Name: " + sellerName);
         System.out.println("Sales Amount: " + salesAmount);
         System.out.println("Basic Salary: " + basicSalary);
         System.out.println("Commission: " + commission);
 
-        input.close();
+             input.close();
     }
 }
+
+
 

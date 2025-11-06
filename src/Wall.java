@@ -1,5 +1,20 @@
-
 public class Wall {
+
+    // Main method for testing
+    public static void main(String[] args) {
+        Wall wall = new Wall(5, 4);
+        System.out.println("area= " + wall.getArea());
+        wall.setHeight(-1.5);
+        System.out.println("width= " + wall.getWidth());
+        System.out.println("height= " + wall.getHeight());
+        System.out.println("area= " + wall.getArea());
+
+        wallAddition();//calliing main method
+    }
+
+    public static void wallAddition() {
+
+    }
     // Instance variables
     private double width;
     private double height;
@@ -58,15 +73,7 @@ public class Wall {
         return this.width * this.height;
     }
 
-    // Main method for testing
-    public static void main(String[] args) {
-        Wall wall = new Wall(5, 4);
-        System.out.println("area= " + wall.getArea());
-        wall.setHeight(-1.5);
-        System.out.println("width= " + wall.getWidth());
-        System.out.println("height= " + wall.getHeight());
-        System.out.println("area= " + wall.getArea());
-    }
 }
+
 
 

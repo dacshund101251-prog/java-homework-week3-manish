@@ -2,9 +2,14 @@ import java.util.Scanner;
 
 public class CityNameAccordinglySwitch {
 
+    // Main method: program entry point
     public static void main(String[] args) {
+        // Call local method to handle city selection logic
+        handleCitySelection();
+    }
 
-
+    // Local method: handles all logic
+    private static void handleCitySelection() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter an alphabet from A to F: ");
@@ -36,7 +41,6 @@ public class CityNameAccordinglySwitch {
         sc.close();
     }
 }
-
 
 
 

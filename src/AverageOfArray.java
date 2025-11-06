@@ -1,25 +1,34 @@
+import java.util.Scanner;
+
 public class AverageOfArray {
 
-
+    // Main method
     public static void main(String[] args) {
-        // Example array multidimensional
-        int[] numbers = {100, 200, 300, 400, 500};
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter number of elements in the array: ");
+        int size = sc.nextInt();
+
+        int[] numbers = new int[size];
+
+        System.out.println("Enter " + size + " array elements:");
+        for (int i = 0; i < size; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        // Call the local method
+        calculateAverage(numbers);
+
+        sc.close();//close scannerdtgk
+    }
+    // Local method containing all the logic
+    public static void calculateAverage(int[] arr) {
         int sum = 0;
-        double average;
-
-
-        // Calculate sum of all elements
-        for (int num : numbers) {
+        for (int num : arr) {
             sum += num;
         }
 
-        // Compute average (cast to double for decimal precision)
-        average = (double) sum / numbers.length;
-
-        // Display the result
-        System.out.println("Sum of array elements: " + sum);
+        double average = (double) sum / arr.length;
         System.out.println("Average value of array elements: " + average);
     }
 }
-
